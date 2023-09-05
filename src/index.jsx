@@ -20,6 +20,7 @@ const QUERY = gql`
 const logMergePolicy = {
   merge(e = null, i, { readField }) {
     console.log(`${readField('__typename', i)}.merge`, JSON.stringify({e, i}));
+    debugger;
     return i;
   }
 }
